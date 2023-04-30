@@ -1,0 +1,32 @@
+body {
+    margin: 0;
+    font-family: 'Asap', sans-serif;
+  }
+
+.home-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #888686;
+    color: #000000;
+    min-height: 100vh;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    padding: 1rem;
+  }
+  
+  .home-page h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+  
+  .home-page p {
+    font-size: 1.1rem;
+    line-height: 1.5;
+    max-width: 800px;
+    text-align: justify;
+  }
+  
+  
+  

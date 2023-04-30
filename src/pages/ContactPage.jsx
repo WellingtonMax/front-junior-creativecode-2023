@@ -3,6 +3,7 @@ import { v4 as uuidv4 } from "uuid";
 import ContactForm from "../components/ContactForm";
 import ContactList from "../components/ContactList";
 import { Form } from "antd";
+import "./ContactPage.css"
 
 const ContactPage = () => {
   const [contacts, setContacts] = useState([]);
@@ -51,18 +52,18 @@ const ContactPage = () => {
   };
 
   return (
-    <div>
+    <div className="contact-page">
       <h1>Contatos</h1>
-      <ContactForm
-        contact={editingContact}
-        onFinish={onFinish}
-        form={form}
-      />
-      <ContactList
-        contacts={contacts}
-        deleteContact={deleteContact}
-        editContact={editContact}
-      />
+      <div className="contact-form-container">
+        <ContactForm contact={editingContact} onFinish={onFinish} form={form} />
+      </div>
+      <div className="contact-list-container">
+        <ContactList
+          contacts={contacts}
+          deleteContact={deleteContact}
+          editContact={editContact}
+        />
+      </div>
     </div>
   );
 };
