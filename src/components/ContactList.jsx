@@ -48,5 +48,3 @@ const ContactTable = ({ contacts, deleteContact, editContact }) => {
 };
 
 export default ContactTable;
-
-

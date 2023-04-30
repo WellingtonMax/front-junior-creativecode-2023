@@ -11,4 +11,3 @@ export const getContacts = () => {
     saveContacts(updatedContacts);
     return updatedContacts;
   };
-  
