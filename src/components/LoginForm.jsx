@@ -9,7 +9,6 @@ const LoginForm = ({ setUsername }) => {
   const onFinish = (values) => {
     setLoading(true);
 
-    // Verifica as credenciais do usuário com base nas variáveis de ambiente
     if (process.env.REACT_APP_USERNAME === values.username && process.env.REACT_APP_PASSWORD === values.password) {
       setUsername(values.username);
       setLoading(false);

@@ -2,8 +2,8 @@ import React, { useState, useEffect } from "react";
 import { v4 as uuidv4 } from "uuid";
 import ContactForm from "../components/ContactForm";
 import ContactList from "../components/ContactList";
-import { Form } from "antd";
-import "./ContactPage.css"
+import { Form, message } from "antd";
+import "./ContactPage.css";
 
 const ContactPage = () => {
   const [contacts, setContacts] = useState([]);
@@ -35,7 +35,19 @@ const ContactPage = () => {
         phone: values.phone,
         email: values.email,
       };
-      setContacts([...contacts, newContact]);
+
+      const isDuplicate = contacts.some(
+        (contact) =>
+          contact.name === newContact.name &&
+          contact.phone === newContact.phone &&
+          contact.email === newContact.email
+      );
+
+      if (isDuplicate) {
+        message.error("Contato duplicado: um contato com os mesmos dados já existe.");
+      } else {
+        setContacts([...contacts, newContact]);
+      }
     }
     setEditingContact(null);
     form.resetFields();
