@@ -1,120 +1,35 @@
-# Projeto Front-end Junior CreativeCode - 2023
-Este projeto foi criado para o processo seletivo de desenvolvedor front-end júnior da CreativeCode.
+# CreativeCode Junior Front-end Challenge (2023)
 
-## 📋 Requisitos
+**React contact-manager exercise · Portfolio archive**
 
-- Node.js
-- npm
+This repository is a React application created for a 2023 junior front-end selection challenge. It demonstrates UI routes, forms, contact management, and a **client-side-only login simulation**. It is not a secure authentication system or production contact database.
 
-## 💻 Tecnologias utilizadas
+## Features visible in source
 
-- React
-- Redux
-- Ant Design
-- Enzyme
-- Jest
+- Home, login, contacts, and not-found pages with React Router.
+- Create, edit, and delete contacts in a responsive Ant Design interface.
+- Browser `localStorage` for the contact list and the simulated login flag.
+- React 18, Ant Design, React Router, and UUIDs.
 
-## 📱 Dispositivos
+## Local setup
 
-### O projeto é compatível com os seguintes dispositivos:
+Requires Node.js and npm.
 
-- Desktop
-- Tablet
-- Celular
+```bash
+npm install
+cp .env.example .env
+npm start
+```
 
-## 🌟 Funcionalidades
-- Página Home Page com descrição do serviço
-- Página de Login com autenticação
-- Página de Contatos com função: Create, Edit e Delete
-- Página de erro 404 personalizada
+On Windows, copy `.env.example` to `.env` manually. The example username and password values are **demonstration inputs only**, not protected secrets. To run the test script supplied by Create React App, use `npm test`. The test suite has not been freshly validated as part of this documentation update.
 
-## 🔧 Instalação
-- Clone o repositório para sua máquina local:
+## Important security limitations
 
-bash
+- `REACT_APP_USERNAME` and `REACT_APP_PASSWORD` are compiled into client-side JavaScript. **They cannot protect a real application.**
+- Authentication state and contacts live in browser `localStorage`, without a backend or authorization checks. Never enter real customer data.
+- A local `.env` file had previously been committed publicly. Removing it from the latest branch does not erase old revisions; rotate any credentials that were ever reused on actual services.
+- A real deployment would require backend authentication, server-enforced permissions, safe credential storage, tests, and a production security review.
 
-`git clone https://github.com/WellingtonMax/front-junior-creativecode-2023.git` 
+## Related portfolio
 
-- Acesse o diretório do projeto:
-
-bash
-
-`cd front-junior-creativecode-2023`
-
-- Instale as dependências:
-
-bash
-
-`npm install`
-
-## ⚙️ Configuração
-### Após instalar todas as dependências, siga os passos abaixo para configurar o projeto:
-
-Instale o adaptador do Enzyme para o React 18:
-
-bash
-
-`npm install enzyme-adapter-react-18`
-
-Corrija as vulnerabilidades de alta gravidade (se houver):
-
-bash
-
-`npm audit fix`
-
-Caso seja necessário, utilize a opção --force para resolver todas as vulnerabilidades, incluindo aquelas que envolvem mudanças que podem quebrar seu projeto:
-
-bash
-
-`npm audit fix --force`
-
-### Atenção: A opção --force pode resultar em versões incompatíveis de dependências sendo instaladas. 
-Verifique as alterações feitas e teste o projeto completamente após a execução do comando.
-
-## 🚀 Execução
-Para executar o projeto em modo de desenvolvimento, use o comando:
-
-bash
-
-`npm start`
-
-Isso iniciará um servidor de desenvolvimento e abrirá o projeto no navegador.
-
-## 🧪 Testes
-
-Para executar os testes do projeto, use o comando:
-
-bash
-
-`npm test`
-
-## 🤝 Contribuindo
-
-Para contribuir com este projeto, siga os passos abaixo:
-
-- Faça um fork do projeto.
-- Crie uma branch para sua funcionalidade ou correção de bug.
-- Faça as alterações necessárias no código.
-- Faça um commit das suas mudanças.
-- Faça um push da sua branch para o seu fork no GitHub.
-- Crie um Pull Request para o repositório original.
-
-## Front-end Dev:
-
-<table>
-  <tr>
-    </td>
-     <td align="center">
-      <a href="https://github.com/WellingtonMax">
-        <img src="https://avatars.githubusercontent.com/u/83736385?v=4" width="100px;" alt="Foto do Wellington"/><br>
-        <sub>
-          <b>Wellington L. Maximiniano</b>
-        </sub>
-      </a>
-    </td>
-  </tr>
-</table>
-
-## 📄 Licença
-
-Este projeto está licenciado sob a Licença MIT. Consulte o arquivo LICENSE para obter detalhes.
+See [Freelance Solutions Portfolio](https://github.com/WellingtonMax/freelance-solutions-portfolio) for newer demonstrations and clearer verification boundaries. A related contact-manager iteration is preserved in [Calldex](https://github.com/WellingtonMax/calldex).
